@@ -1,0 +1,41 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/code-example/src",
+  "prefix": "ngxarch",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/code-example"],
+      "options": {
+        "project": "libs/code-example/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/code-example/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/code-example/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/code-example"],
+      "options": {
+        "jestConfig": "libs/code-example/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/code-example/**/*.ts",
+          "libs/code-example/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

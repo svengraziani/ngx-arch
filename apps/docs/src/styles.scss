@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@use 'node_modules/@anglify/components/styles/index';
+@use 'node_modules/@anglify/components/styles/themes/light' as *;
+
+:root {
+  @include light-theme;
+  @import '~highlight.js/scss/github';
+
+
+}
