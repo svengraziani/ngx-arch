@@ -12,13 +12,18 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 import { ComponentLoader } from './component-loader';
 import { BasicComponent as ExampleIsAuthenticatedComponent } from './examples/is-authenticated/basic/basic.component';
 import { BasicComponent as ExampleConfirmDelegateComponent } from './examples/confirm-delegate/basic/basic.component';
-import { ButtonModule, DialogModule } from '@anglify/components';
+import { BasicComponent as ExampleAlertDelegateComponent } from './examples/alert-delegate/basic/basic.component';
+
+import { ButtonModule, DialogModule, IconModule } from '@anglify/components';
 import { AppRoutingModule } from './app-routing.module';
 import { IsAuthenticatedComponent } from './pages/directives/is-authenticated/is-authenticated.component';
 import { HighlightModule } from 'ngx-highlightjs';
 import { ConfirmDelegateComponent } from './pages/delegates/confirm-delegate/confirm-delegate.component';
 import { ConfirmDialogComponent } from './examples/confirm-delegate/basic/confirm-dialog/confirm-dialog.component';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { AlertDialogComponent } from './examples/alert-delegate/basic/alert-dialog/alert-dialog.component';
+import { AlertDelegateComponent } from './pages/delegates/alert-delegate/alert-delegate.component';
+import { InstallationComponent } from './pages/installation/installation.component';
 
 @NgModule({
   declarations: [
@@ -26,9 +31,13 @@ import { OverlayModule } from '@angular/cdk/overlay';
     NxWelcomeComponent,
     ExampleIsAuthenticatedComponent,
     ExampleConfirmDelegateComponent,
+    ExampleAlertDelegateComponent,
     ConfirmDelegateComponent,
     IsAuthenticatedComponent,
     ConfirmDialogComponent,
+    AlertDialogComponent,
+    AlertDelegateComponent,
+    InstallationComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +47,8 @@ import { OverlayModule } from '@angular/cdk/overlay';
     HighlightModule,
     AppRoutingModule,
     DialogModule,
-    OverlayModule
+    OverlayModule,
+    IconModule
   ],
   providers: [
     {

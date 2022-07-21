@@ -11,5 +11,17 @@ body, html {
 
 :root {
   @include light-theme;
-  @import '~highlight.js/scss/github';
+  @import '~highlight.js/scss/github'; 
+}
+
+pre code {
+  width: 100%;
+    box-sizing: border-box;
+    padding: 1rem!important;
+}
+code {
+  padding: 0 0.5rem!important;
+    background-color: var(--color-surface-overlay)!important;
+    border-radius: 4px;
+    white-space: pre;
 }
