@@ -25,22 +25,17 @@ export class DefaultComponent {
 
   public gettingStarted = [
     { link: 'getting-started/installation', name: 'Installation' },
-    { link: 'getting-started/application-layouts', name: 'Application Layouts' },
-    { link: 'getting-started/release-notes', name: 'Release notes' },
   ];
-
-  public features = [
-    { link: 'features/theming', name: 'Theming' },
-    { link: 'features/icon-fonts', name: 'Icon Fonts' },
-    { link: 'features/breakpoints', name: 'Breakpoints' },
-  ];
-
 
   public delegates = [
     {
       link: 'confirm-delegate',
       name: 'Confirm',
     },
+    {
+      link: 'alert-delegate',
+      name: 'Alert'
+    }
   ];
 
 

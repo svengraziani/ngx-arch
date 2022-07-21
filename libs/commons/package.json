@@ -1,7 +1,22 @@
 {
   "name": "@ngxarch/commons",
-  "version": "0.0.1",
-  "author": "Sven Graziani",
+  "version": "14.0.1",
+  "author": {
+    "name": "Sven Graziani",
+    "email": "sven@graziani.at"
+  },
+  "keywords": [
+    "angular",
+    "architecture",
+    "patterns"
+  ],
+  
+  "repository": {
+    "url": "https://github.com/svengraziani/ngx-arch",
+    "type": "git"
+  },
+  "license": "MIT",
+  "private": false,
   "description": "",
   "peerDependencies": {
     "@angular/common": "^14.0.0",
