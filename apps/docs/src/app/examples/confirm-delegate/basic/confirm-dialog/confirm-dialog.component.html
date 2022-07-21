@@ -1,0 +1,3 @@
+<h3>{{context.data?.message}}</h3>
+<button anglifyButton (click)="context.completeWith({reason: '',data: {confirmed: true}})">Confirm</button>
+<button anglifyButton (click)="context.completeWith({reason: '',data: {confirmed: false}})" appearance="text">Cancel</button>

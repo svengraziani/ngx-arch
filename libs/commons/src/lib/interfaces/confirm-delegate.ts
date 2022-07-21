@@ -1,5 +1,5 @@
 import { Observable } from "rxjs";
 
-export interface ConfirmDelegate {
-    confirm<Issuer, Payload, Response>(payload: Payload, issuer: Issuer): Observable<Response>;
+export interface ConfirmDelegate<Issuer, Payload, Response> {
+    confirm(payload: Payload, issuer: Issuer): Observable<Response>;
 }

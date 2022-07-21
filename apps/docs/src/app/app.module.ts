@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {
-  NgxaIsAuthenticatedDirective,
-} from '@ngxarch/commons';
+import { NgxaIsAuthenticatedDirective } from '@ngxarch/commons';
 import {
   CodeExampleComponent,
   EXAMPLE_FOLDER_URL,
@@ -12,18 +10,25 @@ import {
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { ComponentLoader } from './component-loader';
-import { BasicComponent } from './examples/is-authenticated/basic/basic.component';
-import { ButtonModule } from '@anglify/components';
+import { BasicComponent as ExampleIsAuthenticatedComponent } from './examples/is-authenticated/basic/basic.component';
+import { BasicComponent as ExampleConfirmDelegateComponent } from './examples/confirm-delegate/basic/basic.component';
+import { ButtonModule, DialogModule } from '@anglify/components';
 import { AppRoutingModule } from './app-routing.module';
 import { IsAuthenticatedComponent } from './pages/directives/is-authenticated/is-authenticated.component';
 import { HighlightModule } from 'ngx-highlightjs';
+import { ConfirmDelegateComponent } from './pages/delegates/confirm-delegate/confirm-delegate.component';
+import { ConfirmDialogComponent } from './examples/confirm-delegate/basic/confirm-dialog/confirm-dialog.component';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 @NgModule({
   declarations: [
     AppComponent,
     NxWelcomeComponent,
-    BasicComponent,
+    ExampleIsAuthenticatedComponent,
+    ExampleConfirmDelegateComponent,
+    ConfirmDelegateComponent,
     IsAuthenticatedComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +37,8 @@ import { HighlightModule } from 'ngx-highlightjs';
     ButtonModule,
     HighlightModule,
     AppRoutingModule,
+    DialogModule,
+    OverlayModule
   ],
   providers: [
     {

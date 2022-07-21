@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { IsAuthenticatedComponent } from './pages/directives/is-authenticated/is-authenticated.component';
-
-
+import { ConfirmDelegateComponent } from './pages/delegates/confirm-delegate/confirm-delegate.component';
 
 @NgModule({
   declarations: [],
@@ -17,6 +16,10 @@ import { IsAuthenticatedComponent } from './pages/directives/is-authenticated/is
           {
             path: 'is-authenticated',
             component: IsAuthenticatedComponent
+          },
+          {
+            path: 'confirm-delegate',
+            component: ConfirmDelegateComponent
           }
         ]
       }
