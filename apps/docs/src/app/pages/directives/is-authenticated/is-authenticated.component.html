@@ -1,0 +1,13 @@
+<h1>isAuthenticated</h1>
+<p>Connect any authorization provider for a conditional rendering of template fragments.</p>
+<h3>Tokens</h3>
+<code [highlight]="tokens" [languages]="['typescript']"></code>
+<h3>Properties</h3>
+<h4>Else Template (optional)</h4>
+<code [highlight]="properties" [languages]="['typescript']"></code>
+<h2>Example Usage</h2>
+<p>In this example a FakeAuthService was used to allow switching the auth state, to show that the Directive is decoupled from any auth state provider but coupled to an <code [highlight]="'Observable<boolean>'" [languages]="['typescript']"></code>.</p>
+<ngxarch-code-example component="is-authenticated" example="basic"></ngxarch-code-example>
+
+<h3>Diagram</h3>
+<img src="/assets/diagrams/directives/is-authenticated.svg" />
