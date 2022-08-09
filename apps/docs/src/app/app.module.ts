@@ -13,8 +13,9 @@ import { ComponentLoader } from './component-loader';
 import { BasicComponent as ExampleIsAuthenticatedComponent } from './examples/is-authenticated/basic/basic.component';
 import { BasicComponent as ExampleConfirmDelegateComponent } from './examples/confirm-delegate/basic/basic.component';
 import { BasicComponent as ExampleAlertDelegateComponent } from './examples/alert-delegate/basic/basic.component';
+import { BasicComponent as ExampleLogDelegeComponent } from './examples/log-delegate/basic/basic.component';
 
-import { ButtonModule, DialogModule, IconModule } from '@anglify/components';
+import { ButtonModule, DialogModule, IconModule, SnackbarModule } from '@anglify/components';
 import { AppRoutingModule } from './app-routing.module';
 import { IsAuthenticatedComponent } from './pages/directives/is-authenticated/is-authenticated.component';
 import { HighlightModule } from 'ngx-highlightjs';
@@ -24,6 +25,9 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { AlertDialogComponent } from './examples/alert-delegate/basic/alert-dialog/alert-dialog.component';
 import { AlertDelegateComponent } from './pages/delegates/alert-delegate/alert-delegate.component';
 import { InstallationComponent } from './pages/installation/installation.component';
+import { LogDelegateComponent } from './pages/delegates/log-delegate/log-delegate.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -38,6 +42,8 @@ import { InstallationComponent } from './pages/installation/installation.compone
     AlertDialogComponent,
     AlertDelegateComponent,
     InstallationComponent,
+    LogDelegateComponent,
+    ExampleLogDelegeComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +54,9 @@ import { InstallationComponent } from './pages/installation/installation.compone
     AppRoutingModule,
     DialogModule,
     OverlayModule,
-    IconModule
+    IconModule,
+    NoopAnimationsModule,
+    SnackbarModule
   ],
   providers: [
     {
