@@ -5,6 +5,7 @@ import { IsAuthenticatedComponent } from './pages/directives/is-authenticated/is
 import { ConfirmDelegateComponent } from './pages/delegates/confirm-delegate/confirm-delegate.component';
 import { AlertDelegateComponent } from './pages/delegates/alert-delegate/alert-delegate.component';
 import { InstallationComponent } from './pages/installation/installation.component';
+import { LogDelegateComponent } from './pages/delegates/log-delegate/log-delegate.component';
 
 @NgModule({
   declarations: [],
@@ -31,6 +32,10 @@ import { InstallationComponent } from './pages/installation/installation.compone
           {
             path: 'alert-delegate',
             component: AlertDelegateComponent
+          },
+          {
+            path: 'log-delegate',
+            component: LogDelegateComponent
           },
           {
             path: 'getting-started/installation',

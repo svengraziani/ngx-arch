@@ -21,3 +21,6 @@ export * from './lib/interfaces/process-delegate';
 
 // Standalone Directives
 export * from './lib/directives/is-authenticated.directive';
+
+// Utils
+export * from './lib/utils/log';

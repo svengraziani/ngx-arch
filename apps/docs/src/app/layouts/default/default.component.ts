@@ -35,6 +35,10 @@ export class DefaultComponent {
     {
       link: 'alert-delegate',
       name: 'Alert'
+    },
+    {
+      link: 'log-delegate',
+      name: 'Log'
     }
   ];
 
