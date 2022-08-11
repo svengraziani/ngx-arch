@@ -1,6 +1,6 @@
 import { ConfirmDelegate } from "@ngxarch/commons";
-import { map, mapTo } from "rxjs";
-import { DialogContext, DialogService, ModalData } from '@anglify/components';
+import { map } from "rxjs";
+import { DialogContext, DialogService } from '@anglify/components';
 import { ConfirmDialogComponent } from "./confirm-dialog/confirm-dialog.component";
 import { Injectable } from "@angular/core";
 

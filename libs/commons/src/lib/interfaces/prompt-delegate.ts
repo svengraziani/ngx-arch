@@ -1,5 +1,5 @@
 import { Observable } from "rxjs";
 
-export interface PromptDelegate {
-    prompt<Issuer, Payload, Response>(issuer: Issuer, payload?: Payload): Observable<Response>;
+export interface PromptDelegate<Response, Payload, Issuer> {
+    prompt(issuer: Issuer, payload?: Payload): Observable<Response>;
 }

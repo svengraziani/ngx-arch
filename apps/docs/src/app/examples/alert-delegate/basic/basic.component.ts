@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Inject } from '@angular/core';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { ALERT } from '@ngxarch/commons';
-import { Subject, switchMap, tap } from 'rxjs';
+import { NGXA_ALERT } from '@ngxarch/commons';
+import { Subject, switchMap } from 'rxjs';
 import { Alert, AlertService } from './alert.service';
 
 @UntilDestroy()
@@ -12,7 +12,7 @@ import { Alert, AlertService } from './alert.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
     {
-      provide: ALERT,
+      provide: NGXA_ALERT,
       useExisting: AlertService,
     }
   ]
@@ -26,7 +26,7 @@ export class BasicComponent {
       message: 'Due to your inactivity, you`ll be logged out in 10 seconds.' }, { id: 'signout-notification' })
   ));
 
-  public constructor(@Inject(ALERT) private _alertDelegate: Alert) {
+  public constructor(@Inject(NGXA_ALERT) private _alertDelegate: Alert) {
       this.onInactivityAlertShown.pipe(
         untilDestroyed(this)
       ).subscribe();

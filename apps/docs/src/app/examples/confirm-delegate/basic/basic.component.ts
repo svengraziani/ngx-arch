@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { CONFIRM } from '@ngxarch/commons';
+import { NGXA_CONFIRM } from '@ngxarch/commons';
 import { Subject, switchMap, tap } from 'rxjs';
 import { Confirm, ConfirmService } from './confirm.service';
 
@@ -11,7 +11,7 @@ import { Confirm, ConfirmService } from './confirm.service';
   styleUrls: ['./basic.component.scss'],
   providers: [
     {
-      provide: CONFIRM,
+      provide: NGXA_CONFIRM,
       useExisting: ConfirmService,
     }
   ]
@@ -32,7 +32,7 @@ export class BasicComponent {
   ));
 
   public constructor(
-    @Inject(CONFIRM) private readonly _confirmDelegate: Confirm,
+    @Inject(NGXA_CONFIRM) private readonly _confirmDelegate: Confirm,
   ) { 
     this.onProceedToCheckout.pipe(untilDestroyed(this)).subscribe();
   }

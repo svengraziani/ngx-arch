@@ -3,8 +3,8 @@ import { LogDelegate } from "../interfaces/log-delegate";
 import { LogLevel } from "../interfaces/log-level";
 import { NGXA_LOG } from "../tokens/log-delegate";
 
-export function provideLogger() {
-    return inject(NGXA_LOG);
+export function provideLogger<T>() {
+    return inject(NGXA_LOG) as unknown as T;
 }
 
 export function logInfo(message: string, logger: LogDelegate<unknown, string, LogLevel>, issuer?: unknown): void {
