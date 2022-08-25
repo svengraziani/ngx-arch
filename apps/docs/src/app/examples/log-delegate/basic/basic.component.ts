@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { logInfo, provideLogger, NGXA_LOG, logFatal, logError, logWarn, logTrace } from '@ngxarch/commons';
+import { logInfo, provideLogger, NGXA_LOG, logFatal, logError, logWarn, logTrace, LogDelegate, LogLevel } from '@ngxarch/commons';
 import { LogConsoleHandler } from './console-log-handler';
 import { LogExampleService } from './log-example.service';
 import { LOG_HANDLER } from './log-handler.token';
@@ -32,7 +32,7 @@ import { SnackbarLogHandler } from './snackbar-log-handler';
 export class BasicComponent {
 
   // Provide the delegate logger, you could inject it in the constructor
-  private readonly _logger = provideLogger();
+  private readonly _logger = provideLogger<LogDelegate<unknown, string, LogLevel>>();
 
   public testInfo() {
     logInfo('Info Button was clicked.', this._logger);
