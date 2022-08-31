@@ -1,9 +1,9 @@
 import { Observable } from "rxjs";
 import { ProcessId } from "./process-id";
-import { ProcessState } from "./process-state";
+import { ProcessStatus } from "./process-status";
 
 export interface ProcessDelegate {
-    selectState(pid: ProcessId): Observable<ProcessState>;
+    selectState(pid: ProcessId): Observable<ProcessStatus>;
     start<Issuer>(pid: ProcessId, issuer: Issuer): void;
     stop<Issuer>(pid: ProcessId, issuer: Issuer): void;
     kill<Issuer>(pid: ProcessId, issuer: Issuer): void;
