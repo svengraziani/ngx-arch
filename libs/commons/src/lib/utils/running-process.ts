@@ -1,5 +1,5 @@
-import { Process } from "./process";
-import { ProcessStatus } from "./process-status";
+import { Process } from "../interfaces/process";
+import { ProcessStatus } from "../interfaces/process-status";
 
 
 export function runningProcess<T>(payload: T): Process<T> {

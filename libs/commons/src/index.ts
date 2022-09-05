@@ -19,15 +19,16 @@ export * from './lib/interfaces/log-entry';
 export * from './lib/interfaces/process-id';
 export * from './lib/interfaces/process-status';
 export * from './lib/interfaces/process-delegate';
-export * from './lib/interfaces/handle-process';
-export * from './lib/interfaces/map-to-process-on-complete';
-export * from './lib/interfaces/map-to-process-on-error';
-export * from './lib/interfaces/process-is-running';
-export * from './lib/interfaces/process-had-error';
+export * from './lib/utils/handle-process';
+export * from './lib/utils/map-to-process-on-complete';
+export * from './lib/utils/map-to-process-on-error';
+export * from './lib/utils/process-is-running';
+export * from './lib/utils/process-had-error';
 export * from './lib/interfaces/process';
-export * from './lib/interfaces/complete-process';
-export * from './lib/interfaces/running-process';
-export * from './lib/interfaces/connect-http-process';
+export * from './lib/utils/complete-process';
+export * from './lib/utils/running-process';
+export * from './lib/utils/connect-http-process';
+export * from './lib/utils/process-is-complete';
 export * from './lib/interfaces/map-error-to-process';
 
 // Standalone Directives

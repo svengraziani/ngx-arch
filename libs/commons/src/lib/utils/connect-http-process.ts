@@ -1,9 +1,9 @@
 import { HttpEvent, HttpEventType } from "@angular/common/http";
 import { Observable, map } from "rxjs";
 import { completeProcess } from "./complete-process";
-import { mapErrorToProcess } from "./map-error-to-process";
-import { Process } from "./process";
-import { ProcessStatus } from "./process-status";
+import { mapErrorToProcess } from "../interfaces/map-error-to-process";
+import { Process } from "../interfaces/process";
+import { ProcessStatus } from "../interfaces/process-status";
 import { runningProcess } from "./running-process";
 
 export function connectHttpProcess<T>(observable: Observable<HttpEvent<T>>): Observable<Process<T | Error>> {
