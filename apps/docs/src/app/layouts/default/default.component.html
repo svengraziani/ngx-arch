@@ -58,6 +58,17 @@
             <anglify-list-item-title>{{ directive.name }}</anglify-list-item-title>
           </anglify-list-item>
         </anglify-list-group>
+        <anglify-list-group>
+          <ng-template slot="activator:prepend">
+            <anglify-icon icon="mdi-strategy"></anglify-icon>
+          </ng-template>
+          <ng-template slot="activator">
+            <anglify-list-item-title>Patterns</anglify-list-item-title>
+          </ng-template>
+          <anglify-list-item *ngFor="let pattern of patterns" [routerLink]="pattern.link">
+            <anglify-list-item-title>{{ pattern.name }}</anglify-list-item-title>
+          </anglify-list-item>
+        </anglify-list-group>
       </anglify-list-item-group>
     </anglify-list>
   </anglify-navigation-drawer>

@@ -7,6 +7,7 @@ import { AlertDelegateComponent } from './pages/delegates/alert-delegate/alert-d
 import { InstallationComponent } from './pages/installation/installation.component';
 import { LogDelegateComponent } from './pages/delegates/log-delegate/log-delegate.component';
 import { PromptDelegateComponent } from './pages/delegates/prompt-delegate/prompt-delegate.component';
+import { ProcessComponent } from './pages/patterns/process/process.component';
 
 @NgModule({
   declarations: [],
@@ -45,6 +46,10 @@ import { PromptDelegateComponent } from './pages/delegates/prompt-delegate/promp
           {
             path: 'getting-started/installation',
             component: InstallationComponent
+          },
+          {
+            path: 'patterns/process',
+            component: ProcessComponent
           }
         ]
       }

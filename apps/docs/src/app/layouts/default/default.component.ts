@@ -54,6 +54,13 @@ export class DefaultComponent {
     },
   ];
 
+  public patterns = [
+    {
+      link: 'patterns/process',
+      name: 'Process',
+    }
+  ];
+
   public initTheme() {
     const theme = localStorage.getItem('theme') as 'light' | 'dark' | null;
     if (theme) {
