@@ -39,6 +39,10 @@ export class DefaultComponent {
     {
       link: 'log-delegate',
       name: 'Log'
+    },
+    {
+      link: 'prompt-delegate',
+      name: 'Prompt'
     }
   ];
 

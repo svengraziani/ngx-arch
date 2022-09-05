@@ -1,4 +1,4 @@
-import { AlertDelegate, ConfirmDelegate } from "@ngxarch/commons";
+import { AlertDelegate } from "@ngxarch/commons";
 import { map } from "rxjs";
 import { DialogContext, DialogService } from '@anglify/components';
 

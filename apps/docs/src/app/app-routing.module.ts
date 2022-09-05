@@ -6,6 +6,7 @@ import { ConfirmDelegateComponent } from './pages/delegates/confirm-delegate/con
 import { AlertDelegateComponent } from './pages/delegates/alert-delegate/alert-delegate.component';
 import { InstallationComponent } from './pages/installation/installation.component';
 import { LogDelegateComponent } from './pages/delegates/log-delegate/log-delegate.component';
+import { PromptDelegateComponent } from './pages/delegates/prompt-delegate/prompt-delegate.component';
 
 @NgModule({
   declarations: [],
@@ -36,6 +37,10 @@ import { LogDelegateComponent } from './pages/delegates/log-delegate/log-delegat
           {
             path: 'log-delegate',
             component: LogDelegateComponent
+          },
+          {
+            path: 'prompt-delegate',
+            component: PromptDelegateComponent
           },
           {
             path: 'getting-started/installation',
