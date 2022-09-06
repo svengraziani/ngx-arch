@@ -1,2 +1,8 @@
 <h1>Process Pattern</h1>
+<p>The Process Pattern is a pattern that provides additional meta information about an observable stream.</p>
+<p>It decorates the original data stream and wraps it into a simplistic pattern.</p>
+<h3>Example</h3>
+<p>In the context of an "isLoading$" stream (Observable[boolean]), the primitive boolean does not provide enough information to handle an exact UI representation.</p>
+<p>An HTTP Call may not only be loading or not-loading. For example, a stream could have errored or never started.</p>
+<h2>Diagram</h2>
 <img src="/assets/diagrams/process-pattern.svg" />
