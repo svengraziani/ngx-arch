@@ -1,78 +1,96 @@
 <anglify-toolbar [elevation]="5">
-    <ng-template slot="navigation">
-      <button anglifyButton appearance="icon" (click)="drawer.toggle()" aria-label="Toggle navigation menu">
-        <anglify-icon icon="mdi-menu"></anglify-icon>
-      </button>
-    </ng-template>
-    <ng-template slot="title">NG Architecture Extensions</ng-template>
-    <ng-template slot="actions">
-      <button anglifyButton appearance="icon" (click)="openGithubRepo()" [anglifyTooltip]="githubTooltip" aria-label="Open GitHub Repository">
-        <anglify-icon icon="mdi-github"></anglify-icon>
-        <ng-template #githubTooltip>
-          Open GitHub Repo
-          <anglify-icon icon="mdi-open-in-new" [right]="true" size="x-small"></anglify-icon>
+  <ng-template slot="navigation">
+    <button
+      anglifyButton
+      appearance="icon"
+      (click)="drawer.toggle()"
+      aria-label="Toggle navigation menu"
+    >
+      <anglify-icon icon="mdi-menu"></anglify-icon>
+    </button>
+  </ng-template>
+  <ng-template slot="title">NG Architecture Extensions</ng-template>
+  <ng-template slot="actions">
+    <button
+      anglifyButton
+      appearance="icon"
+      (click)="openGithubRepo()"
+      [anglifyTooltip]="githubTooltip"
+      aria-label="Open GitHub Repository"
+    >
+      <anglify-icon icon="mdi-github"></anglify-icon>
+      <ng-template #githubTooltip>
+        Open GitHub Repo
+        <anglify-icon
+          icon="mdi-open-in-new"
+          [right]="true"
+          size="x-small"
+        ></anglify-icon>
+      </ng-template>
+    </button>
+    <button
+      anglifyButton
+      appearance="icon"
+      (click)="toggleTheme()"
+      anglifyTooltip="Switch theme"
+      aria-label="Switch Website Theme"
+    >
+      <anglify-icon icon="mdi-theme-light-dark"></anglify-icon>
+    </button>
+  </ng-template>
+</anglify-toolbar>
+<anglify-navigation-drawer
+  [mode]="(breakpointService.mdAndDown$ | async) ? 'modal' : 'standard'"
+  [ngModel]="(breakpointService.lgAndUp$ | async) ?? true"
+  #drawer
+>
+  <anglify-list [dense]="true" [nav]="true">
+    <anglify-list-item-group [mandatory]="true">
+      <anglify-list-group>
+        <ng-template slot="activator:prepend">
+          <anglify-icon icon="mdi-text-box"></anglify-icon>
         </ng-template>
-      </button>
-      <button anglifyButton appearance="icon" (click)="toggleTheme()" anglifyTooltip="Switch theme" aria-label="Switch Website Theme">
-        <anglify-icon icon="mdi-theme-light-dark"></anglify-icon>
-      </button>
-    </ng-template>
-  </anglify-toolbar>
-  <anglify-navigation-drawer
-    [mode]="(breakpointService.mdAndDown$ | async) ? 'modal' : 'standard'"
-    [ngModel]="(breakpointService.lgAndUp$ | async) ?? true"
-    #drawer
-  >
-    <anglify-list [dense]="true" [nav]="true">
-      <anglify-list-item-group [mandatory]="true">
-        <anglify-list-group>
-          <ng-template slot="activator:prepend">
-            <anglify-icon icon="mdi-text-box"></anglify-icon>
-          </ng-template>
-          <ng-template slot="activator">
-            <anglify-list-item-title>Getting started</anglify-list-item-title>
-          </ng-template>
-          <anglify-list-item *ngFor="let article of gettingStarted" [routerLink]="article.link">
-            <anglify-list-item-title>{{ article.name }}</anglify-list-item-title>
-          </anglify-list-item>
-        </anglify-list-group>
-        <anglify-list-group>
-          <ng-template slot="activator:prepend">
-            <anglify-icon icon="mdi-feature-search"></anglify-icon>
-          </ng-template>
-          <ng-template slot="activator">
-            <anglify-list-item-title>Delegates</anglify-list-item-title>
-          </ng-template>
-          <anglify-list-item *ngFor="let delegate of delegates" [routerLink]="delegate.link">
-            <anglify-list-item-title>{{ delegate.name }}</anglify-list-item-title>
-          </anglify-list-item>
-        </anglify-list-group>
-        <anglify-list-group>
-          <ng-template slot="activator:prepend">
-            <anglify-icon icon="mdi-toggle-switch-outline"></anglify-icon>
-          </ng-template>
-          <ng-template slot="activator">
-            <anglify-list-item-title>Directives</anglify-list-item-title>
-          </ng-template>
-          <anglify-list-item *ngFor="let directive of directives" [routerLink]="directive.link">
-            <anglify-list-item-title>{{ directive.name }}</anglify-list-item-title>
-          </anglify-list-item>
-        </anglify-list-group>
-        <anglify-list-group>
-          <ng-template slot="activator:prepend">
-            <anglify-icon icon="mdi-strategy"></anglify-icon>
-          </ng-template>
-          <ng-template slot="activator">
-            <anglify-list-item-title>Patterns</anglify-list-item-title>
-          </ng-template>
-          <anglify-list-item *ngFor="let pattern of patterns" [routerLink]="pattern.link">
-            <anglify-list-item-title>{{ pattern.name }}</anglify-list-item-title>
-          </anglify-list-item>
-        </anglify-list-group>
-      </anglify-list-item-group>
-    </anglify-list>
-  </anglify-navigation-drawer>
-  <main>
-    <router-outlet></router-outlet>
-  </main>
-  
+        <ng-template slot="activator">
+          <anglify-list-item-title>Getting started</anglify-list-item-title>
+        </ng-template>
+        <anglify-list-item
+          *ngFor="let article of gettingStarted"
+          [routerLink]="article.link"
+        >
+          <anglify-list-item-title>{{ article.name }}</anglify-list-item-title>
+        </anglify-list-item>
+      </anglify-list-group>
+      <anglify-list-group>
+        <ng-template slot="activator:prepend">
+          <anglify-icon icon="mdi-feature-search"></anglify-icon>
+        </ng-template>
+        <ng-template slot="activator">
+          <anglify-list-item-title>Delegates</anglify-list-item-title>
+        </ng-template>
+        <anglify-list-item
+          *ngFor="let delegate of delegates"
+          [routerLink]="delegate.link"
+        >
+          <anglify-list-item-title>{{ delegate.name }}</anglify-list-item-title>
+        </anglify-list-item>
+      </anglify-list-group>
+      <anglify-list-group>
+        <ng-template slot="activator:prepend">
+          <anglify-icon icon="mdi-strategy"></anglify-icon>
+        </ng-template>
+        <ng-template slot="activator">
+          <anglify-list-item-title>Patterns</anglify-list-item-title>
+        </ng-template>
+        <anglify-list-item
+          *ngFor="let pattern of patterns"
+          [routerLink]="pattern.link"
+        >
+          <anglify-list-item-title>{{ pattern.name }}</anglify-list-item-title>
+        </anglify-list-item>
+      </anglify-list-group>
+    </anglify-list-item-group>
+  </anglify-list>
+</anglify-navigation-drawer>
+<main>
+  <router-outlet></router-outlet>
+</main>

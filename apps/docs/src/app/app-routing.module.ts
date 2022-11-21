@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { IsAuthenticatedComponent } from './pages/directives/is-authenticated/is-authenticated.component';
 import { ConfirmDelegateComponent } from './pages/delegates/confirm-delegate/confirm-delegate.component';
 import { AlertDelegateComponent } from './pages/delegates/alert-delegate/alert-delegate.component';
 import { InstallationComponent } from './pages/installation/installation.component';
@@ -16,7 +15,10 @@ import { ProcessComponent } from './pages/patterns/process/process.component';
     RouterModule.forRoot([
       {
         path: '',
-        loadComponent: () => import('./layouts/default/default.component').then(m => m.DefaultComponent),
+        loadComponent: () =>
+          import('./layouts/default/default.component').then(
+            (m) => m.DefaultComponent
+          ),
         children: [
           {
             path: '',
@@ -24,39 +26,33 @@ import { ProcessComponent } from './pages/patterns/process/process.component';
             redirectTo: 'getting-started/installation',
           },
           {
-            path: 'is-authenticated',
-            component: IsAuthenticatedComponent
-          },
-          {
             path: 'confirm-delegate',
-            component: ConfirmDelegateComponent
+            component: ConfirmDelegateComponent,
           },
           {
             path: 'alert-delegate',
-            component: AlertDelegateComponent
+            component: AlertDelegateComponent,
           },
           {
             path: 'log-delegate',
-            component: LogDelegateComponent
+            component: LogDelegateComponent,
           },
           {
             path: 'prompt-delegate',
-            component: PromptDelegateComponent
+            component: PromptDelegateComponent,
           },
           {
             path: 'getting-started/installation',
-            component: InstallationComponent
+            component: InstallationComponent,
           },
           {
             path: 'patterns/process',
-            component: ProcessComponent
-          }
-        ]
-      }
-    ])
+            component: ProcessComponent,
+          },
+        ],
+      },
+    ]),
   ],
-  exports: [
-    RouterModule
-  ]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

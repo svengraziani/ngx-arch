@@ -10,7 +10,6 @@ import {
 import { AppComponent } from './app.component';
 
 import { ComponentLoader } from './component-loader';
-import { BasicComponent as ExampleIsAuthenticatedComponent } from './examples/is-authenticated/basic/basic.component';
 import { BasicComponent as ExampleConfirmDelegateComponent } from './examples/confirm-delegate/basic/basic.component';
 import { BasicComponent as ExampleAlertDelegateComponent } from './examples/alert-delegate/basic/basic.component';
 import { BasicComponent as ExampleLogDelegeComponent } from './examples/log-delegate/basic/basic.component';
@@ -23,7 +22,6 @@ import {
   SnackbarModule,
 } from '@anglify/components';
 import { AppRoutingModule } from './app-routing.module';
-import { IsAuthenticatedComponent } from './pages/directives/is-authenticated/is-authenticated.component';
 import { HighlightModule } from 'ngx-highlightjs';
 import { ConfirmDelegateComponent } from './pages/delegates/confirm-delegate/confirm-delegate.component';
 import { ConfirmDialogComponent } from './examples/confirm-delegate/basic/confirm-dialog/confirm-dialog.component';
@@ -38,11 +36,9 @@ import { PromptDelegateComponent } from './pages/delegates/prompt-delegate/promp
 @NgModule({
   declarations: [
     AppComponent,
-    ExampleIsAuthenticatedComponent,
     ExampleConfirmDelegateComponent,
     ExampleAlertDelegateComponent,
     ConfirmDelegateComponent,
-    IsAuthenticatedComponent,
     ConfirmDialogComponent,
     AlertDialogComponent,
     AlertDelegateComponent,
