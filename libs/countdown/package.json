@@ -1,6 +1,6 @@
 {
   "name": "@ngxarch/countdown",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": {
     "name": "Sven Graziani",
     "email": "sven@graziani.at"
@@ -11,7 +11,7 @@
     "patterns"
   ],
   "repository": {
-    "url": "https://github.com/svengraziani/ngx-arch#packages",
+    "url": "https://github.com/svengraziani/ngx-arch/#packages",
     "type": "git"
   },
   "license": "MIT",
