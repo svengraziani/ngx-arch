@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@ngxarch/code-example": ["libs/code-example/src/index.ts"],
-      "@ngxarch/commons": ["libs/commons/src/index.ts"]
+      "@ngxarch/commons": ["libs/commons/src/index.ts"],
+      "@ngxarch/countdown": ["libs/countdown/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,0 +1,41 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/countdown/src",
+  "prefix": "ngxarch",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/countdown"],
+      "options": {
+        "project": "libs/countdown/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/countdown/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/countdown/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/countdown"],
+      "options": {
+        "jestConfig": "libs/countdown/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/countdown/**/*.ts",
+          "libs/countdown/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

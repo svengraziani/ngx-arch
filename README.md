@@ -5,7 +5,15 @@ This project is intending to provide a set of interfaces, architecture patterns 
 
 Docs: <https://ngxarch.web.app/>
 
+- [Angular Architecture Extension (NgxArch)](#angular-architecture-extension-ngxarch)
+  - [Changelog](#changelog)
+  - [Packages](#packages)
+
 ## Changelog
 
 - Deprecated `connectHttpProcess` in favor for `processFromHttpEvent`.
 - Removed examples for isAuthenticated directive.
+
+## Packages
+
+- [Reactive Countdown](libs/countdown/README.md) Countdown utility. This library is for you whenever you need a reactive countdown or timer.

@@ -4,6 +4,7 @@
   "projects": {
     "code-example": "libs/code-example",
     "commons": "libs/commons",
+    "countdown": "libs/countdown",
     "docs": "apps/docs",
     "docs-e2e": "apps/docs-e2e"
   }
