@@ -16,7 +16,7 @@
   },
   "license": "MIT",
   "private": false,
-  "description": "",
+  "description": "This project is intending to provide a set of interfaces, architecture patterns and paradigms that are easily extensible and usable.",
   "peerDependencies": {
     "@angular/common": "^14.0.0",
     "@angular/core": "^14.0.0"

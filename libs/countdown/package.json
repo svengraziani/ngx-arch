@@ -1,6 +1,22 @@
 {
   "name": "@ngxarch/countdown",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "author": {
+    "name": "Sven Graziani",
+    "email": "sven@graziani.at"
+  },
+  "keywords": [
+    "angular",
+    "architecture",
+    "patterns"
+  ],
+  "repository": {
+    "url": "https://github.com/svengraziani/ngx-arch#packages",
+    "type": "git"
+  },
+  "license": "MIT",
+  "private": false,
+  "description": "Countdown utility. This library is for you whenever you need a reactive countdown or timer.",
   "peerDependencies": {
     "@angular/common": "^14.2.0",
     "@angular/core": "^14.2.0"
