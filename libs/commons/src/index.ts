@@ -30,7 +30,6 @@ export * from './lib/utils/complete-process';
 export * from './lib/utils/running-process';
 export * from './lib/utils/connect-http-process';
 export * from './lib/utils/process-is-complete';
-export * from './lib/interfaces/map-error-to-process';
 export * from './lib/utils/process-from-http-event';
 
 // Standalone Directives

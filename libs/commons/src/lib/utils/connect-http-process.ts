@@ -1,7 +1,6 @@
 import { HttpEvent, HttpEventType } from '@angular/common/http';
-import { Observable, map } from 'rxjs';
+import { Observable, map, catchError, of } from 'rxjs';
 import { completeProcess } from './complete-process';
-import { mapErrorToProcess } from '../interfaces/map-error-to-process';
 import { Process } from '../interfaces/process';
 import { ProcessStatus } from '../interfaces/process-status';
 import { runningProcess } from './running-process';
@@ -31,6 +30,11 @@ export function connectHttpProcess<T>(
         payload: [] as unknown as T,
       };
     }),
-    mapErrorToProcess()
+    catchError((error: Error) =>
+      of({
+        status: ProcessStatus.ERRORED,
+        payload: error,
+      })
+    )
   );
 }
